@@ -8,7 +8,7 @@ Response:
     products: [
         {
             tariffName: '',
-            annualCosts: 0   <!--euros/year-->
+            annualCost: 0   <!--euros/year-->
         }
     ]
 }
