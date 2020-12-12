@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Unit test coverage: 0 / 100%\"",
     "serve": "node dist/index.js"
   },
   "author": "Marcus Tedesco",
