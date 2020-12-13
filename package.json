@@ -2,12 +2,12 @@
   "name": "tariff-comparison",
   "version": "1.0.0",
   "description": "Tariff comparison calculator task",
-  "main": "index.ts",
+  "main": "server.ts",
   "scripts": {
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon src/server.ts",
     "build": "tsc",
     "test": "echo \"Unit test coverage: 0 / 100%\"",
-    "serve": "node dist/index.js"
+    "serve": "node dist/server.js"
   },
   "author": "Marcus Tedesco",
   "repository": {

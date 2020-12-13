@@ -9,6 +9,8 @@
 
 ## REST API
 
+Example: http://localhost:8000/tariffs?consumption=4500
+
 GET tariffs: `http://localhost:8000/tariffs`
 
 Query: `?consumption=4500` in (kWh/year)
@@ -16,9 +18,9 @@ Query: `?consumption=4500` in (kWh/year)
 Response:
 ```
 {
-    products: [
+    tariffs: [
         {
-            tariffName: '',
+            name: '',
             annualCost: 0  <!--euros/year-->
         }
     ]

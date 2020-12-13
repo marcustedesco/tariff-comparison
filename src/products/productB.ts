@@ -1,15 +1,24 @@
-import { Product } from '../types';
+import { Product, Tariff } from '../types';
 
 export class ProductB implements Product {
     name: string = 'Packaged tariff';
-    base: number = 800;
-    min: number = 4000; 
-    rate: number = 0.3;
-    calcTariff(consumption: number): number{
-        let price: number = this.base;
-        if(consumption > this.min) {
-            price += ((consumption - this.min) * this.rate);
+
+    private _baseCost: number = 800;
+    private _includedConsumptionPerYear: number = 4000; 
+    private _additionalConsumptionRatePerKWH: number = 0.3;
+
+    private calcTariffCost(consumption: number): number {
+        let cost: number = this._baseCost;
+        if(consumption > this._includedConsumptionPerYear) {
+            cost += ((consumption - this._includedConsumptionPerYear) * this._additionalConsumptionRatePerKWH);
         }
-        return price;
+        return cost;
+    }
+
+    getTariff(consumption: number): Tariff {
+        return {
+            name: this.name,
+            annualCost: this.calcTariffCost(consumption)
+        }
     }
 }
