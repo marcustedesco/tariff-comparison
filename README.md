@@ -26,3 +26,11 @@ Response:
     ]
 }
 ```
+
+## Testing 
+
+### Unit testing
+Not implemented
+
+### Integration testing
+Not implemented
